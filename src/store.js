@@ -9,7 +9,6 @@ const findById = function (id) {
 
 const addItem = function (item) {
   this.items.push(item);
-  }
 };
 
 const findAndToggleChecked = function (id) {
