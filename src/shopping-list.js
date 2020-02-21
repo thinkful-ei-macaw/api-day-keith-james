@@ -74,9 +74,9 @@ const handleDeleteItemClicked = function () {
       .then(res => res.json())
       .then(() => {
         store.findAndDelete(id);
-    render();
-   }
- });
+        render();
+      });
+  });
 };
 
 const handleEditShoppingItemSubmit = function () {
