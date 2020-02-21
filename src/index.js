@@ -11,7 +11,10 @@ import api from './api';
 const main = function () {
 
   api.getItems()
-    .then(res => console.log(res));
+  
+  .then(res => res.json())
+  .then(res => console.log(res));
+
 
   shoppingList.bindEventListeners();
   shoppingList.render();
