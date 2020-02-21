@@ -36,5 +36,6 @@ export default {
   findAndUpdate,
   findAndDelete,
   setError,
-  error
+  error,
+  toggleCheckedFilter
 };
