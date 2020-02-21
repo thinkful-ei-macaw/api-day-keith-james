@@ -14,6 +14,13 @@ const main = function () {
       items.forEach((item) => store.addItem(item));
       shoppingList.render();
 
+      api.createItem(newItemName)
+  .then(res => res.json())
+  .then((newItem) => {
+    store.addItem(newItem);
+    render();
+  });
+
       const item = store.items[0];
       console.log('current name: ' + item.name);
       store.findAndUpdate(item.id, { name: 'barbaz' });
