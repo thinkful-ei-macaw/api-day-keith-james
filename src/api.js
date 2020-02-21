@@ -16,18 +16,20 @@ const createItem = function (name) {
   });
 };
 
-function updateItem(id, updateData) {
-  fetch(`${BASE_URL}/items/${id}`, {
+const updateItem = function (id, updateData) {
+  const newData = JSON.stringify(updateData);
+  return fetch(`${BASE_URL}/items/${id}`, {
     method: 'PATCH',
     headers: {
-      'Content-Type': 'applicaton/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(updateData)
+    body: newData
   });
-}
+};
 
 
 export default {
   getItems,
-  createItem
+  createItem,
+  updateItem
 };
